@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Computer Vision Mid Semester Exam</title>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 40px;
+            background: #f8f9fb;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #1a4d8f;
+        }
+
+        h2 {
+            color: #1a4d8f;
+            margin-top: 30px;
+        }
+
+        ul {
+            margin-left: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .task {
+            margin-bottom: 15px;
+        }
+
+        .highlight {
+            background: #f1f5ff;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .submit-btn {
+            background: #1a4d8f;
+            color: white;
+            padding: 14px 28px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .submit-btn:hover {
+            background: #133a6b;
+        }
+
+        .footer {
+            margin-top: 30px;
+            border-top: 1px solid #ddd;
+            padding-top: 15px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Introduction to Computer Vision (AI309E)</h1>
+        <h2 style="text-align:center;">Mid Semester Examination (4th Semester)</h2>
+
+        <h2>Overview</h2>
+
+        <p style="text-align:justify;">
+            In this examination, you are required to perform a series of image processing operations on a given colour
+            image (<b>Lena Image</b>) using Python. The objective of this exam is to evaluate your understanding of
+            basic computer vision concepts, image transformations, and morphological operations.
+        </p>
+
+        <p style="text-align:justify;">
+            You must implement all the required tasks using the <b>OpenCV (cv2)</b> library for performing image
+            processing operations and <b>Matplotlib</b> for displaying images in the notebook. Each operation should be
+            implemented through proper Python code, and the output image must be displayed clearly after every task.
+        </p>
+
+        <p style="text-align:justify;">
+            Students are required to write their code in a <b>Jupyter Notebook</b>, ensuring that each step is properly
+            organized and clearly labelled.
+        </p>
+
+        <h2>Tasks to be Performed</h2>
+
+        <p>You are required to perform the following operations on the given Lena colour image:</p>
+
+        <div class="task"><b>1. Read the Image</b>
+            <ul>
+                <li>Load the Lena image using an appropriate OpenCV function.</li>
+            </ul>
+        </div>
+
+        <div class="task"><b>2. Display the Blue Channel of the Image</b>
+            <ul>
+                <li>Extract and display only the blue channel from the original colour image.</li>
+            </ul>
+        </div>
+
+        <div class="task"><b>3. Convert the Image into Grayscale</b>
+            <ul>
+                <li>Convert the colour image into grayscale and display the result.</li>
+            </ul>
+        </div>
+
+        <div class="task"><b>4. Resize the Image</b>
+            <ul>
+                <li>Resize the original image to <b>1000 × 400</b> pixels.</li>
+            </ul>
+        </div>
+
+        <div class="task"><b>5. Translate the Image</b>
+            <ul>
+                <li>Shift the image by:</li>
+                <li>200 pixels along the <b>X-axis</b></li>
+                <li>100 pixels along the <b>Y-axis</b></li>
+                <li>Display the translated image.</li>
+            </ul>
+        </div>
+
+        <div class="task"><b>6. Rotate the Image</b>
+            <ul>
+                <li>Rotate the image by <b>45 degrees</b> around its center.</li>
+            </ul>
+        </div>
+
+        <div class="task"><b>7. Generate the Negative Image</b>
+            <ul>
+                <li>Create the negative of the image by inverting pixel intensity values.</li>
+            </ul>
+        </div>
+
+        <div class="task"><b>8. Apply Log Transformation</b>
+            <ul>
+                <li>Perform logarithmic transformation to enhance lower intensity values.</li>
+            </ul>
+        </div>
+
+        <div class="task"><b>9. Histogram Equalization</b>
+            <ul>
+                <li>Apply histogram equalization to improve image contrast.</li>
+            </ul>
+        </div>
+
+        <div class="task"><b>10. Morphological Operations</b>
+            <ul>
+                <li>Apply the following operations:</li>
+                <li>Erosion</li>
+                <li>Closing</li>
+                <li>Gradient</li>
+                <li>Display results for each operation.</li>
+            </ul>
+        </div>
+
+        <h2>Implementation Guidelines</h2>
+
+        <div class="highlight">
+            <ul>
+                <li>Use <b>OpenCV (cv2)</b> for image processing operations.</li>
+                <li>Use <b>Matplotlib (matplotlib.pyplot)</b> to display images.</li>
+                <li>Each task must be implemented in <b>separate code cells</b>.</li>
+                <li>Clearly label the output of each operation.</li>
+                <li>Add brief comments explaining the steps in your code.</li>
+            </ul>
+        </div>
+
+        <h2>Submission Instructions</h2>
+
+        <ul>
+            <li>Complete all tasks in a <b>single Jupyter Notebook (.ipynb)</b>.</li>
+            <li>Ensure the notebook runs without errors.</li>
+            <li>Mention the following details at the top of your notebook:</li>
+            <ul>
+                <li>Name</li>
+                <li>Roll Number</li>
+            </ul>
+            <li>Submit your notebook using the Google Form below.</li>
+        </ul>
+
+        <h2>Submission</h2>
+
+        <div class="button-container">
+            <a class="submit-btn" href="https://forms.gle/VA7tTXVrBBwvpovU8" target="_blank">
+                Submit Your Notebook
+            </a>
+        </div>
+
+        <div class="footer">
+
+            <h2>Evaluation Criteria</h2>
+
+            <p><b>Total Marks: 40</b></p>
+
+            <ul>
+                <li>Correct implementation of image processing operations</li>
+                <li>Proper use of OpenCV functions</li>
+                <li>Correct visualization of outputs</li>
+                <li>Code clarity and organization</li>
+            </ul>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
