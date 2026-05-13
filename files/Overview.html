@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro To AI Make-up exam Proeblem statement</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=DM+Sans:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        :root {
+            --navy: #102542;
+            --teal: #0f8b8d;
+            --orange: #e76f51;
+            --cream: #f8f5f1;
+            --white: #ffffff;
+            --text: #1d2d35;
+            --muted: #5f6c7b;
+            --border: #d9e2ec;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: var(--cream);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        .banner {
+            background: linear-gradient(135deg, var(--navy), #16355c);
+            color: white;
+            padding: 60px 30px;
+        }
+
+        .banner-content {
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .course-tag {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.12);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            margin-bottom: 18px;
+            letter-spacing: 1px;
+        }
+
+        .banner h1 {
+            font-family: 'Merriweather', serif;
+            font-size: 38px;
+            margin-bottom: 12px;
+        }
+
+        .banner p {
+            color: #d7e3f0;
+            font-size: 16px;
+            max-width: 700px;
+        }
+
+        .marks-box {
+            margin-top: 28px;
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.12);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 12px 22px;
+            border-radius: 10px;
+        }
+
+        .marks-box strong {
+            font-size: 30px;
+            color: #ffd166;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 24px 60px;
+        }
+
+        .section-title {
+            font-family: 'Merriweather', serif;
+            font-size: 24px;
+            color: var(--navy);
+            margin-bottom: 18px;
+        }
+
+        .overview {
+            background: white;
+            padding: 28px;
+            border-radius: 14px;
+            border-left: 5px solid var(--teal);
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+            margin-bottom: 40px;
+        }
+
+        .task-card {
+            background: white;
+            border-radius: 14px;
+            padding: 24px;
+            margin-bottom: 22px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+            border: 1px solid var(--border);
+        }
+
+        .task-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 14px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .task-title {
+            font-family: 'Merriweather', serif;
+            font-size: 20px;
+            color: var(--navy);
+        }
+
+        .marks-pill {
+            background: rgba(15, 139, 141, 0.12);
+            color: var(--teal);
+            padding: 5px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 700;
+        }
+ .btn-submit {
+            display: inline-block;
+            background: var(--teal);
+            color: white;
+            padding: 14px 34px;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 600;
+            text-decoration: none;
+            letter-spacing: 0.3px;
+            transition: background 0.2s, transform 0.2s;
+        }
+
+        .btn-submit:hover {
+            background: var(--teal-light);
+            transform: translateY(-2px);
+        }
+        .task-card p {
+            color: var(--muted);
+            margin-bottom: 12px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        ul li {
+            margin-bottom: 8px;
+        }
+
+        code {
+            background: #eef3f8;
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: var(--orange);
+            font-size: 14px;
+        }
+
+        .submission,
+        .evaluation {
+            background: white;
+            padding: 28px;
+            border-radius: 14px;
+            margin-top: 35px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 18px;
+        }
+
+        table th,
+        table td {
+            border: 1px solid var(--border);
+            padding: 14px;
+            text-align: left;
+        }
+
+        table th {
+            background: #f3f7fb;
+            color: var(--navy);
+        }
+
+        .footer-note {
+            margin-top: 25px;
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        @media (max-width: 640px) {
+            .banner h1 {
+                font-size: 28px;
+            }
+
+            .task-title {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Banner -->
+    <div class="banner">
+        <div class="banner-content">
+
+            <div class="course-tag">
+                Intro to AI Make-Up Exam
+            </div>
+
+            <h1>Iris Flower Classification using KNN</h1>
+
+            <p>
+                Build a machine learning classification model using the Iris Dataset from scikit-learn
+                and classify flowers into their respective species using the K-Nearest Neighbors algorithm.
+            </p>
+
+            <div class="marks-box">
+                <strong>15</strong> Marks
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="container">
+
+        <!-- Overview -->
+        <h2 class="section-title">Overview</h2>
+
+        <div class="overview">
+            You are required to build a classification model using the
+            <strong>Iris Dataset</strong> available in <strong>scikit-learn</strong>.
+            The dataset contains measurements of flowers, and your task is to classify
+            them into their respective species using the
+            <strong>K-Nearest Neighbors (KNN)</strong> algorithm.
+        </div>
+
+        <!-- Task 1 -->
+        <div class="task-card">
+
+            <div class="task-header">
+                <div class="task-title">Task 1 — Load and Explore the Dataset</div>
+            </div>
+
+            <p>
+                Load the Iris dataset and display the required dataset attributes.
+            </p>
+
+            <ul>
+                <li>Display feature names</li>
+                <li>Display target class labels</li>
+                <li>Use <code>load_iris()</code> from <code>sklearn.datasets</code></li>
+                <li>Explore attributes like:
+                    <code>.data</code>,
+                    <code>.target</code>,
+                    <code>.feature_names</code>,
+                    <code>.target_names</code>
+                </li>
+            </ul>
+
+        </div>
+
+        <!-- Task 2 -->
+        <div class="task-card">
+
+            <div class="task-header">
+                <div class="task-title">Task 2 — Split the Dataset</div>
+            
+            </div>
+
+            <p>
+                Split the dataset into training and testing sets.
+            </p>
+
+            <ul>
+                
+                <li>Use:
+                    <strong>80% training</strong> and
+                    <strong>20% testing</strong>
+                </li>
+            </ul>
+
+        </div>
+
+        <!-- Task 3 -->
+        <div class="task-card">
+
+            <div class="task-header">
+                <div class="task-title">Task 3 — Train the KNN Classifier</div>
+                
+            </div>
+
+            <p>
+                Train a K-Nearest Neighbors classification model.
+            </p>
+
+            <ul>
+                <li>Import <code>KNeighborsClassifier</code> from
+                    <code>sklearn.neighbors</code>
+                </li>
+                <li>Train the model using <code>.fit()</code></li>
+            </ul>
+
+        </div>
+
+        <!-- Task 4 -->
+        <div class="task-card">
+
+            <div class="task-header">
+                <div class="task-title">Task 4 — Predict the Test Data</div>
+            
+            </div>
+
+            <p>
+                Predict the flower species for the testing dataset.
+            </p>
+
+            <ul>
+                <li>Use <code>.predict()</code></li>
+                <li>Generate predictions for test data</li>
+            </ul>
+
+        </div>
+
+        <!-- Task 5 -->
+        <div class="task-card">
+
+            <div class="task-header">
+                <div class="task-title">Task 5 — Evaluate the Model</div>
+           
+            </div>
+
+            <p>
+                Evaluate the performance of the classification model.
+            </p>
+
+            <ul>
+                <li>Calculate Accuracy</li>
+                <li>Generate Confusion Matrix</li>
+                <li>Use <code>model.score()</code> for accuracy</li>
+                <li>Use <code>confusion_matrix()</code> 
+                   
+                </li>
+            </ul>
+
+        </div>
+
+        <!-- Submission -->
+        <div class="submission">
+
+            <h2 class="section-title">Submission Instructions</h2>
+
+            <ul>
+                <li>Submit a single Jupyter Notebook (<code>.ipynb</code>) file.</li>
+                <li>Ensure all outputs are visible before submission.</li>
+                <li>Include the following details at the top of the notebook:
+                    <ul>
+                        <li>Full Name</li>
+                        <li>Roll Number</li>
+                        <li>Section / Batch</li>
+                    </ul>
+                </li>
+           
+             <li>Submit using the Google Form link below before the deadline.</li>
+            </ul>
+            <a class="btn-submit" href="https://forms.gle/epSMtnMwpVWanjcW7" target="_blank">Submit Your Notebook
+                &rarr;</a>
+
+        </div>
+
+        <!-- Evaluation -->
+        
+    </div>
+
+</body>
+
+</html>
